@@ -1,0 +1,839 @@
+@charset "UTF-8";
+
+.wrap{
+  overflow: hidden;
+}
+.loading{
+	background: #007AB7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.loading img{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+}
+
+@media screen and (max-width: 768px){
+  .loading img{
+    top: 45%;
+    width: 287px;
+    height: 117px;
+  }
+    header {
+      background: url(../images/fulltaiwan.png) no-repeat center/cover;
+      height: 667px;
+      position: relative;
+      width: 100%;
+    }
+    #pc,.pc{
+      display: none;
+    }
+
+        /*drawer開始*/
+    .drawerNav {
+      display: block;
+      position: fixed;
+      top: 0;
+      /* ナビゲーションを表示させる位置を指定する */
+      right: -1800px;
+      bottom: 0;
+      /* メニューアイコンを押下した際のナビゲーションメニューの横幅を指定する */
+      width: 225px;;
+      background: RGBA(0,0,0,70%);
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: all 0.5s;
+      z-index: 4;
+      opacity: 0;
+    }
+    .open .drawerNav {
+      /* ナビゲーションの表示位置を指定する */
+      right: 0;
+      /* ナビゲーションの透過率を指定する */
+      opacity: 1;
+    }
+    .inner{
+      font-family: Zen Kaku Gothic New;
+      font-weight: bold;
+      padding: 0;
+    }
+    .drawerLogo{
+      margin: 8px 0 0 12px;
+    }
+    .inner p{
+      font-size: 24px;
+      color: #ffffff;
+      text-align: center;
+      margin: 84px 0 60px;
+    }
+    .inner ul{
+      display: inlineblock;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .inner ul li{
+      text-align: center;
+    }
+    .inner ul li a{
+      display: inlineblock;
+      color: #ffffff;
+      font-size: 20px;
+      transition-duration: 0.2s;
+      text-decoration:none;
+      border-bottom: #ffffff 1px solid;
+    }
+    .item1{
+      margin-bottom: 40px;
+    }
+    .item2{
+      margin-bottom: 20px;
+    }
+    /*toggle_btn*/
+    .toggleBtn {
+      display: block;
+      position: fixed;
+      top: 4px;
+      right: 4px;
+      cursor: pointer;
+      z-index: 3;
+    }
+    /*close_btn*/
+    .drawercloseBtn {
+      position: absolute;
+      color: #fff ;
+      cursor: pointer;
+      /* 非表示にしたハンバーガーメニューの変わりにCLOSEを表示する位置を指定する   */
+      top: 4px;
+      right: 4px;
+      z-index: 4;
+    }
+    /*mask*/
+    #mask  {
+      display: none;
+      transition: all .5s;
+    }
+    /* ナビゲーションが展開された部分の外側余白を指定する */
+    .open #mask  {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .8;
+      z-index: 2;
+      cursor: pointer;
+      /*drawer終了*/
+    }
+}
+
+.mainLogo{
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+.facebook1{
+  position: absolute;
+  top: 461px;
+  left: 20px;
+}
+.instagram1{
+  position: absolute;
+  top: 513px;
+  left: 20px;
+}
+.twitter1{
+  position: absolute;
+  top: 565px;
+  left: 20px;
+}
+/*header終了*/
+
+@media screen and (max-width: 768px){
+    .main1{
+      background: url(../images/introductionbg1.png) no-repeat center/cover;
+      height: 407px;
+      position: relative;
+      width: 100%;
+    }
+}
+.flag{
+  width: 32px;
+  height: 24px;
+  margin: 20px 171.5px 40px;
+}
+h2{
+  font-family: Zen Kaku Gothic New;
+  font-size: 20px;
+  margin: 0 150px 20px 149px;
+}
+.main1 p{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  margin-left: 121px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.main1 p::after{
+  content:'';
+  width: 132px; /* 線の幅 */
+  height: 1px; /* 線の高さ */
+  background-color: #000000; /* 線の色 */
+  position: absolute; /* position: relative;からの線の絶対位置 */
+  left: 0px;
+  bottom: -12px;
+}
+.formosaPicture{
+  width: 100%;
+  padding: 0 20px 60px 20px;
+}
+@media screen and (max-width: 768px){
+    .main2{
+      background: url(../images/introductionbg2.png) no-repeat center/cover;
+      height: 399px;
+      position: relative;
+      width: 100%;
+      padding-top: 20px;
+    }
+}
+.main2 p{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  margin: 0px 76px 72px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 12px 0;
+}
+/*formosa終了*/
+
+.heading{
+  position: relative;
+}
+h1{
+  font-size: 24px;
+  font-family: Zen Kaku Gothic New;
+  position: absolute;
+  left: 108px;  
+  top: 28px;
+}
+h1 span{
+  font-size: 0.5em;
+  font-family: Zen Kaku Gothic New;
+}
+.heading img{
+  width: 220px;
+  height: 40px;
+  margin: 20px 77.5px 60px; /*スライダー作成時はスライダー上に+20px*/
+}
+.content1 h1 span{
+  left: 88px;
+}
+/*見出し終了*/
+
+.carouselArea{
+  display: flex;
+}
+.carouselArea img{
+  margin: 20px 40px;
+}
+.dot{
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin: 0 40px 0 0;
+  background-color: RGBA(0,0,0,50%);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#dotLast{
+  margin:0;
+}
+.dots{
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/*スライダー終了*/
+
+.content2 p{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  margin: 0 78.02px 0 76px;
+  border-top: #000000 1px solid;
+  border-bottom: #000000 1px solid;
+  padding: 12px 0;
+}
+.map{
+  position: relative;
+}
+.mapPhoto{
+  width: 180px;
+  height: 355px;
+  margin: 60.2px 98px 171.8px 97px;
+}
+.nameTaipei{
+  position: absolute;
+  top: 115px;
+  left: 256px;
+  width: 59px;
+  height: 126px;
+}
+.nameTaichu{
+  position: absolute;
+  top: 142.62px;
+  left: 60px;
+  width: 59px;
+  height: 126px;
+}
+.nameTainan{
+  position: absolute;
+  top: 341px;
+  left: 112px;
+  width: 59px;
+  height: 126px;
+}
+.map::after{
+  content:'';
+  width: 223px; /* 線の幅 */
+  height: 1px; /* 線の高さ */
+  background-color: #000000; /* 線の色 */
+  position: absolute; /* position: relative;からの線の絶対位置 */
+  left: 76px;
+  bottom: 60px;
+}
+/*travel終了*/
+
+h3{
+  font-family: Zen Kaku Gothic New;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h4{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+h5{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.event1 img,.event2 img{
+  width: 100%;
+  padding: 0 20px 20px;
+}
+.event1 p,.event2 p{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  border-top: #000000 1px solid;
+  border-bottom: #000000 1px solid;
+  padding: 12px 0;
+  margin: 0 76px;
+}
+.event1 p{
+  margin-bottom: 40px;
+}
+.event2 p{
+  margin-bottom: 60px;
+}
+/*event終了*/
+
+.data{
+  position: relative;
+}
+h6{
+  font-family: Zen Kaku Gothic New;
+  font-size: 20px;
+  text-align: center;
+  padding: 40px 0;
+}
+.dataContent1,.dataContent2{
+  font-family: Zen Kaku Gothic New;
+  font-size: 12px;
+  width: 295px;
+  display: block;
+  margin: auto;
+}
+.dataContent1{
+  margin-bottom: 40px;
+}
+.dataContent2{
+  margin-bottom: 100px;
+}
+.frameBorder3{
+  border: #8F8F8F 1px solid;
+  margin: 0px auto;
+  width: 335px;
+  height: 448.94px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 0;
+  pointer-events: none;
+}
+/*data終了*/
+
+#pageTop img{
+  width: 48px;
+  height: 48px;
+  position:fixed;
+  right: 4px;
+  bottom: 35%;
+  cursor:pointer;
+  z-index: 10;
+}
+.frameBorder1 {
+  border: 1px solid #FF0000;
+  margin: 0px auto;
+  width: 335px;
+  height: 4500px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  pointer-events: none;
+}
+.frameBorder2 {
+  border: 1px solid #FF0000;
+  margin: 0px auto;
+  width: 335px;
+  height: 345px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  pointer-events: none;
+}
+/*枠終了*/
+
+footer{
+  background-color: #007AB7;
+  width: 100%;
+  padding:20px 20px 0;
+  position: relative;
+}
+.country{
+  width: 32px;
+  height: 24px;
+  display: block;
+  margin: auto;
+}
+.footerNavi{
+  font-size: 12px;
+  font-family: Zen Kaku Gothic New;
+  padding: 20px 70px 40px 70px;
+  color: #FFFFFF;
+}
+.footerNavi li{
+  margin-bottom: 12px;
+  border-bottom: #FFFFFF 1px solid;
+}
+.logo2{
+  width: 71px;
+  height: 28px;
+  margin-right: 24px;
+  margin-bottom: 12px;
+}
+.facebook2{
+  margin-bottom: 12px;
+  margin-right: 20px;
+}
+.instagram2{
+  margin-right: 20px;
+  margin-bottom: 12px;
+}
+.twitter2{
+  margin-bottom: 12px;
+}
+footer p{
+  font-size: 8px;
+  font-family: Zen Kaku Gothic New;
+  color: #FFFFFF;
+  text-align: center;
+  border-top: solid 1px #03A9F4;
+  padding: 12px 0 12px 0;
+}
+/*footer終了*/
+
+@media screen and (min-width: 768px){
+  #sp, .sp{
+    display: none;
+  }
+  #pc{
+      object-fit: cover;
+  }
+  .drawer{
+      display: none;
+  }
+  /*drawernavi*/
+  .pcNav{
+    margin-left: 580px;
+  }
+  .pcNav ul li{
+    list-style: none;
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 50px;
+    font-family: Zen Kaku Gothic New;
+  }
+  .item3{
+    margin-right: 20px;
+  }
+  /*drawernavi終了*/
+  header{
+      background: url(../images/pcfulltaiwan.png) no-repeat center/cover;
+      height: 768px;
+      width: 1366px;
+      position: relative;
+  }
+  .mainLogo{
+    width: 780px;
+    height: 314px;
+    left: 223px;
+    top: 174px;
+  }
+  .facebook1{
+    top: 512px;
+    left: 103px;
+  }
+  .instagram1{
+    top: 584px;
+    left: 103px;
+  }
+  .twitter1{
+    top: 656px;
+    left: 103px;
+  }
+  .headerLogo{
+    position: absolute;
+    top: 20px;
+    left: 103px;
+  }
+  /*header終了*/
+
+  .main1{
+    background: url(../images/pcintroductionbg1.png) no-repeat center/cover;
+    height: 458px;
+    position: relative;
+    width: 100%;
+  }
+  .main2{
+    background: url(../images/pcintroductionbg2.png) no-repeat center/cover;
+    height: 458px;
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .flag{
+    width: 104px;
+    height: 78px;
+    margin: 80px 0 100px 283px;
+  }
+  h2{
+    font-size: 48px;
+    margin: 0 0 20px 103px;
+  }
+  .main1 p{
+    font-size: 32px;
+    margin: 0 0 0 103px;
+  }
+  .main1 p::after{
+    width: 361px; /* 線の幅 */
+    left: 0px;
+    bottom: -20px;
+  }
+  .formosaPicture{
+    width: 636px;
+    height: 298px;
+    position: absolute;
+    top: 80px;
+    left: 627px;
+    padding: 0;
+  }
+  .Formosa{
+    position: relative;
+  }
+  .main2 p{
+    width: 420px;
+    font-size: 20px;
+    padding: 60px 0;
+    margin: 80px 0 98px 103px;
+  }
+  /*main 終了*/
+
+  .heading img{
+    width: 530px;
+    height: 96px;
+    margin: 20px 0 160px 103px;  /*スライダー分引く場合、下-20px*/
+  }
+  h1{
+    font-size: 48px;
+    top: 44px;
+    left: 223px;
+  }
+  /*スライダー*/
+  .carouselArea{
+    display: flex;
+  }
+  .carouselArea img{
+    padding-right: 80px;
+    margin: 0 0 78px;
+  }
+  .lastPhoto{
+    padding: 0;
+  }
+  .dot{
+    width: 28px;
+    height: 28px;
+    margin: 0 60px 98px 0;
+  }
+  #dotLast{
+    margin-bottom: 98px;
+  }
+  .indicator{
+    position: relative;
+  }
+  .leftBtn{
+    position: absolute;
+    left: 369px;
+    top: -20px;
+  }
+  .rightBtn{
+    position: absolute;
+    left: 933px;
+    top: -20px;
+  }
+
+  /*スライダー終了*/
+
+  .travel .heading img{
+    margin: 20px 0 120px 733px ;
+  }
+  .travel .heading h1{
+    top: 44px;
+    left: 812px;
+  }
+  .content2{
+    display: flex;
+  }
+  .content2 p{
+    font-size: 20px;
+    width: 420px;
+    padding: 60px 0 ;
+    margin: 302px 220px 341px 163px;
+  }
+  .mapPhoto{
+    width: 225px;
+    height: 508px;
+    margin: 0 0 0 79px;
+  }
+  .map{
+    display: flex;
+    width: 400px;
+    height: 611px;
+    margin: 120px 163px 160px 0;
+  }
+  .nameTaipei{
+    width: 99px;
+    height: 209px;
+    top: 61px;
+    left: 281px;
+  }
+  .nameTaichu{
+    width: 99px;
+    height: 209px;
+    left: 0;
+    top: 90px;
+  }
+  .nameTainan{
+    width: 99px;
+    height: 209px;
+    left: 63px;
+    top: 402px;
+  }
+  .travel{
+    position: relative;
+  }
+  .travel::after{
+    content:'';
+    width: 480px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);  /* transformがセンタリングしたい要素の縦、横幅分を引いてくれるので中央になる */
+  }
+  .map::after{
+    display: none;
+  }
+  /*travel終了*/
+
+  .eventContent img{
+    margin: 20px 0 120px 103px;
+  }
+  h3{
+    text-align: start;
+    font-size: 36px;
+    margin: 0 0 40px 103px;
+  }
+  .event1 img,.event2 img{
+    width: 580px;
+    height: 396px;
+    padding: 0;
+    margin: 0 0 80px 103px;
+  }
+  .event1Content,.event2Content{
+    display: flex;
+    align-items: center;
+  }
+  h4{
+    font-size: 20px;
+    margin: 32px 0 32px 250px;
+    text-align: start;
+  }
+  h5{
+    font-size: 20px;
+    text-align: start;
+  }
+  .event1Ex h5{
+    margin: 0 0 0 78px;
+  }
+  .event2Ex h5{
+    margin: 0 0  0 200px;
+  }
+  .event1Content p,.event2Content p{
+    font-size: 20px;
+    padding: 32px 0;
+    width: 314px;
+    margin:32px 0 0 133px;
+  }
+  .event1Ex,.event2Ex{
+    width: 580px;
+    height: 396px;
+  }
+  .event2 img{
+    margin-bottom: 88.8px;
+  }
+  /*event終了*/
+
+  h6{
+    font-size: 40px;
+    padding: 120px 0 80px;
+  }
+  .dataEx{
+    display: flex;
+  }
+  .dataContent1,.dataContent2{
+    font-size: 20px;
+  }
+  .dataContent1{
+    width: 450px;
+    height: 320px;
+    margin: 0px 60px 160px 203px;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+  }
+  .dataContent2{
+    width: 450px;
+    height: 320px;
+    margin: 0px 203px 160px 0;
+    line-height: 1.5;
+  }
+  .frameBorder3{
+    width: 1040px;
+    height: 560px;
+    top: 80px;
+    left: 163px;
+    bottom: 0;
+  }
+  /*data終了*/
+
+  .frameBorder1 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 1200px;
+    height: 6215px;
+    position: absolute;
+    top: 0px;
+    left: 83px;
+    pointer-events: none;
+  }
+  .frameBorder2 {
+      display: none;
+  }
+  #pageTop img{
+      width: 100px;
+      height: 100px;
+      right: 20px;
+  }
+  /*機能*/
+  
+  footer{
+    padding: 40px 0 0;
+    position: relative;
+  }
+  .country {
+      width: 64px;
+      height: 48px;
+  }
+  .footerNavi{
+      width: 332px;
+      padding: 0;
+      margin: 28px 0 20px 103px;
+      font-size: 20px;
+  }
+  .footerNavi li{
+      margin-bottom: 32px;
+  }
+  .logo2{
+      width: 256px;
+      height: 103px;
+      display: block;
+      position: absolute;
+      margin: 0;
+      top: 376px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .facebook2{
+      margin: 0;
+      position: absolute;
+      left: 70%;
+      top: 376px;
+  }
+  .instagram2{
+      margin: 0;
+      position: absolute;
+      left: 75%;
+      top: 376px;
+  }
+  .twitter2{
+      margin: 0;
+      position: absolute;
+      left: 80%;
+      top: 376px;
+  }
+  footer p{
+      font-size: 12px;
+      padding: 20px;
+  }
+}
