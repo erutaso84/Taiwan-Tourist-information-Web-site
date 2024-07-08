@@ -1,0 +1,1233 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Zen Kaku Gothic New',serif;
+    font-size: 12px;
+}
+header nav {
+    color: #ffffff;
+}
+/* ヘッダー部分 */
+header {
+    background: url(../images/herofultaipeiimage.png) no-repeat center/cover;
+    height: 667px;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+.mainLogo {
+    display: block;
+    width: 199px;
+    margin: 72px auto 175px;
+}
+.pcMainLogo {
+    display: none;
+}
+.headerLogo img {
+    width: 111px;
+    height: 45px;
+    margin-left: 20px;
+}
+.drawer {
+    width: 45px;
+    height: 45px;
+}
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+}
+header p {
+    color: #ffffff;
+    font-weight: bold;
+    width: 247px;
+    height: 57.6px;
+    margin: 4.4px 20px 8px 108px;
+    position: absolute;
+    top: 601.4px;
+}
+
+@media screen and (max-width: 768px) {
+    .pcNav {
+        display: none;
+    }
+}
+
+/* ここからjavaScriptのハンバーガーナビゲーション */
+/* ===== 機能の実装に必要なCSS ===== */
+
+/* ドロワーナビゲーションの必須スタイル */
+#nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+    width: 270px;
+    height: 100%;
+}
+
+/* ドロワーが開かれたときのスタイル */
+.show {
+    transform: translate3d(-250px, 0, 0);
+}
+
+/* 開く・閉じるアニメーション */
+#nav {
+    transition: transform 0.3s;
+    /* position: absolute; */
+    
+}
+/* ===== ヘッダーにボタンを配置 ===== */
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.headerLogo {
+    flex: 1 1 auto;
+}
+.hamburger {
+    /* flex: 0 0 48px; */
+    align-self: center;
+    margin-left: 16px;
+    text-align: center;
+    position: fixed;
+    right: 4px;
+    top: 4px;
+    z-index: 120;
+}
+/* ===== 装飾的なCSS ===== */
+#nav {
+    padding: 8px 24px 0 24px;
+    background-color: #000000BF;
+    color: #ffffff;
+}
+#nav ul .top {
+    padding-bottom: 40px;
+}
+#nav li a {
+    display: block;
+    padding: 0.9rem 0 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 0.1px solid #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+}
+#nav li a:hover {
+    background: #0e3e4d;
+}
+#nav .drawerLogo {
+    margin-bottom: 20px;
+}
+.drawerClose {
+    width: 48px;
+    height: 48px;
+}
+.logoClose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 81px;
+}
+#nav p {
+    width: 57px;
+    height: 24px;
+    margin: 0 auto 80px;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+#nav ul {
+    width: 180px;
+    height: 20px;
+    margin: 10px auto;
+    font-size: 20px;
+    text-align: center;
+}
+.mgn80 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+    .pcContainer {
+        display: none;
+    }
+}
+/* ハンバーガーナビゲーション終わり */
+
+
+.facebook{
+    position: absolute;
+    top: 461px;
+    left: 20px;
+}
+.insta {
+    position: absolute;
+    top: 513px;
+    left: 20px;
+}
+.twitter {
+    position: absolute;
+    top: 565px;
+    left: 20px;
+}
+/* パンくずナビゲーション */
+.breadcrumbs {
+    display: flex;
+    font-size: 16px;
+    margin: 8px 0 8px 20px;
+    text-transform: capitalize;
+}
+
+.breadcrumbs li::after{
+    content: '>';
+    display: inline-block;
+    padding: 0 10px; /*左右に余白*/
+}
+  
+.breadcrumbs li:last-child::after{
+    display: none;
+}
+.border1 {
+    border-top: 1px solid #000000;
+}
+/* attraction */
+.attraction {
+    position: relative;
+}
+.attraction h2 {
+    font-size: 24px;
+    width: 145px;
+    margin: 28px auto 48px;
+    text-align: center;
+}
+.attraction h2 span {
+    font-size: 12px;
+}
+.attractionBackImg {
+    position: absolute;
+    top: -10px;
+    left: 75px;
+}
+/* 見出し３ */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    height: 24px;
+    margin: 40px auto 20px;
+    text-align: center;
+    letter-spacing: -2px; /* 文字間を狭める */
+}
+figure {
+    width: 295px;
+    margin: 20px auto;
+}
+figure img {
+    margin-bottom: 20px;
+}
+figcaption {
+    background-color: rgba(108,186,216,20%);
+    height: 246.4px;
+}
+figcaption p {
+    width: 223px;
+    height: 230.4px;
+    margin: 8px auto;
+    padding: 8px 0;
+    line-height: 1.6;
+}
+.SubImg {
+    width: 295px;
+    margin: 0 auto 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pcSubImg {
+    display: none;
+}
+.SubImg li {
+    flex-basis: 48%;
+}
+.Info {
+    width: 295px;
+    height: 53px;
+    margin: 0 auto;
+    text-align: center;
+}
+.timeInfo {
+    font-weight: bold;
+    margin: 8px 0;
+}
+.line {
+    width: 223px;
+    margin: 40px auto;
+    border-bottom: 1px solid;
+}
+.line2 {
+    width: 223px;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+}
+.nightMarket {
+    position: relative;
+}
+.nightMarket h2 {
+    font-size: 20px;
+    width: 145px;
+    margin: 28px auto 48px;
+    text-align: center;
+}
+.nightMarket h2 span {
+    font-size: 10px;
+}
+.nightMarketBackImg {
+    position: absolute;
+    top: -10px;
+    left: 75px;
+    margin-bottom: 48px;
+}
+.line2 {
+    width: 223px;
+    margin: 12px auto 12px;
+    border-bottom: 1px solid;
+}
+.sentence {
+    width: 223px;
+    height: 158.4px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+.marketImg {
+    width: 183px;
+    height: 122px;
+    margin: 0 auto 20px;
+}
+@media screen and (max-width: 768px) {
+    .pcMarketImg1 {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .pcMarketImg2 {
+        display: none;
+    }
+}
+.frameBtn {
+    width: 295px;
+    margin: 0 auto 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    pointer-events: none; /* 押しても反応しなかったため設定 */
+}
+.frameBtn li {
+    width: 131.5px;
+    height: 48px;
+    margin: 18px 0;
+}
+.marketName {
+    font-weight: bold;
+}
+.openBtn1 {
+    position: absolute;
+    left: 81.75px;
+    top: 510px;
+}
+.openBtn2 {
+    position: absolute;
+    left: 227.25px;
+    top: 510px;
+}
+.openBtn3 {
+    position: absolute;
+    left: 81.75px;
+    top: 592px;
+}
+.openBtn4 {
+    position: absolute;
+    left: 245.25px;
+    top: 592px;
+}
+.line5 {
+    width: 223px;
+    margin: 40px auto 40px;
+    border-bottom: 1px solid;
+}
+
+/* 新モーダル */
+.marketName {
+    font-weight: bold;
+}
+.modalOpen1 {
+    position: absolute;
+    top: 3210px;
+    left: 80px;
+}
+.modalOpen2 {
+    position: absolute;
+    top: 3210px;
+    left: 225px;
+}
+.modalOpen3 {
+    position: absolute;
+    top: 3295px;
+    left: 80px;
+}
+.modalOpen4 {
+    position: absolute;
+    top: 3295px;
+    left: 245px;
+}
+.modalContainer1 {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer2 {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer3 {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer4 {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalBody {
+    position: relative;
+    width: 375px;
+    height: 667px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(1,128,190,1);
+    color: #ffffff;
+    /* text-align: center; */
+}
+h3 {
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+}
+.modalBody img {
+    margin-bottom: 20px;
+}
+.modalBody p {
+    width: 303px;
+    height: 115.2px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.modalBody ul {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.modalBody ul li {
+    line-height: 1.6;
+}
+.modalClose1 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose2 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose3 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose4 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+/* 新モーダル終わり */
+
+.access {
+    position: relative;
+}
+.access h2 {
+    font-size: 20px;
+    width: 145px;
+    margin: 28px auto 48px;
+    text-align: center;
+}
+.access h2 span {
+    font-size: 10px;
+}
+.accessBackImg {
+    position: absolute;
+    top: -10px;
+    left: 75px;
+}
+.sentence2 {
+    width: 223px;
+    height: 12px;
+    margin: 0 auto;
+    text-align: center;
+}
+.line6 {
+    width: 223px;
+    margin: 12px auto 40px;
+    border-bottom: 1px solid;
+}
+.accessImg {
+    width: 335px;
+    height: 134px;
+    margin: 0 auto 40px;
+}
+h4 {
+    margin-left: 78px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+.access h4 span {
+    font-weight: bold;
+}
+.accessInfo p {
+    width: 223px;
+    margin-left: 78px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.pc {
+    display: none;
+}
+.cardImg {
+    width: 95px;
+    height: 61px;
+    margin: 20px auto 60px;
+}
+@media screen and (max-width: 768px) {
+    .pcAccessImg {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .pcCardImg {
+        display: none;
+    }
+}
+footer {
+    background-color: #007AB7e6; /* #007ab7の透明度90％ */
+    color: #ffffff;
+    position: relative;
+    height: 360px;
+}
+.nationalFlag {
+    width: 32px;
+    height: 24px;
+    margin: 0 auto 20px;
+    padding: 20px 0;
+}
+.footerLine {
+    border-bottom: 1px solid;
+    width: 195px;
+    margin: 6px auto 12px;
+}
+footer nav ul li {
+    margin: 0 0 0 90px;
+}
+.footerIcon {
+    width: 142.9px;
+    height: 32px;
+    margin: 40px auto 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.border2 {
+    border-top: 1px solid #03A9F4;
+}
+.footerLogo {
+    position: absolute;
+    width: 71px;
+    height: 28px;
+    top: 290px;
+    left: 20px;
+}
+.footerEnd {
+    width: 175px;
+    height: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .pcNationalFlag {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .pcFooterLogo {
+        display: none;
+    }
+}
+.frameBorder1 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 335px;
+    height: 4532.6px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+.frameBorder2 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 335px;
+    height: 361px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+.returnIcon {
+    width:48px;
+    height: 48px;
+    position: fixed;
+    bottom: 500px;
+    right: 0; 
+}
+/* ローディング臼井さんからの提供 */
+.loading{
+	background: #007AB7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.loading img{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+}
+/* 臼井さんからの提供終わり */
+
+@media screen and (min-width: 768px) {
+    /* ヘッダー部分 */
+    header {
+        background: url(../images/pcherofultaipeiimage.png) no-repeat center/cover;
+        height: 768px;
+        position: relative;
+    }
+    /* pcナビゲーションを横並びにする */
+    .pcContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .pcNav ul {
+        color: #ffffff;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 48px;
+    }
+    .pcNav li {
+        padding-right: 20px;
+    }
+    .headerLogo {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    body {
+        font-family: 'Zen Kaku Gothic New',serif;
+        font-size: 24px;
+    }
+    .facebook{
+        position: absolute;
+        top: 512px;
+        left: 103px;
+    }
+    .insta {
+        position: absolute;
+        top: 584px;
+        left: 103px;
+    }
+    .twitter {
+        position: absolute;
+        top: 656px;
+        left: 103px;
+    }
+    .mainLogo {
+        display: none;
+        width: 199px;
+        margin: 72px auto 175px;
+    }
+    .mainLogo img {
+        display: none;
+        width: 300px;
+        height: 539.82px;
+        margin: 94px 703px 134.18px 363px;
+    }
+    .pcMainLogo {
+        display: flex;
+        width: 300px;
+        height: 539.82px;
+        margin: 0 703px 134.18px 363px;
+    }
+    .headerLogo {
+        width: 133px;
+        height: 54px;
+        margin-left: 102px;
+        margin-top: 30px;
+    }
+    header p {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        width: 457px;
+        height: 96px;
+        margin: 4.4px 20px 8px 108px;
+        position: absolute;
+        top: 670px;
+        right: 65px;
+    }
+
+    /* パンくずナビゲーション */
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        margin: 8px 0 8px 103px;
+        text-transform: capitalize;
+    }    
+    .breadcrumbs li::after{
+        content: '>';
+        display: inline-block;
+        padding: 0 10px; /*左右に余白*/
+    }      
+    .breadcrumbs li:last-child::after{
+        display: none;
+    }
+    .breadcrumbs {
+        height: 60px;
+    }
+
+    /* 赤枠 */
+    .frameBorder1 {
+        border: 1px solid #FF0000;
+        margin: 0px auto;
+        width: 1200px;
+        height: 5250px;
+        position: absolute;
+        top: 0px;
+        left: 83px;
+        pointer-events: none;
+    }
+    h3 {
+        font-size: 36px;
+        font-weight: bold;
+        width: 140px;
+        height: 36px;
+        margin: 20px 1143px 0px 103px;
+        text-align: initial;
+    }
+    /* アトラクション */
+    .attraction {
+        position: relative;
+    }
+    .attraction h2 {
+        font-size: 48px;
+        width: 322px;
+        height: 48px;
+        margin: 44px 837.5px 104px 206.5px;
+        text-align: center;
+        position: relative;
+        top: 40px;
+        left: -10px;
+    }
+    .attraction h2 span {
+        font-size: 24px;
+    }
+    .attractionBackImg img {
+        width: 530px;
+        height: 96px;
+        position: relative;
+        left: 20px;
+        top: 10px;
+    }
+    figure {
+        width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    figure img {
+        margin-bottom: 20px;
+        width: 600px;
+        height: 360px;
+    }
+    figcaption {
+        background-color: rgba(108,186,216,20%);
+        width: 500px;
+        height: 360px;
+    }
+    figcaption p {
+        width: 420px;
+        height: 320px;
+        margin: 8px auto;
+        padding: 8px 0;
+        line-height: 1.6;
+        font-size: 20px;
+    }
+    .pcSubImg {
+        width: 600px;
+        height: 167px;
+        margin: 0 653px 0 104px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .pcSubImg li {
+        flex-basis: 48%;
+    }
+    .SubImg {
+        display: none;
+    }
+    .Info {
+        background-color: rgba(108,186,216,20%);
+        font-size: 20px;
+        width: 500px;
+        height: 167px;
+        margin: 0 103px 0 763px;
+        padding-top: 40px;
+        /* position: absolute;
+        top: 600px; */
+    }
+    .jiufenSight {
+        position: absolute;
+        top: 610px;
+    }
+    .taipei101 {
+        position: absolute;
+        top: 1390px;
+    }
+    .timeInfo {
+        font-weight: bold;
+        margin: 8px 0;
+    }
+    .line {
+        width: 480px;
+        margin: 80px auto;
+        border-bottom: 1px solid;
+    }
+    /* 夜市 */
+    .nightMarket {
+        position: relative;
+    }
+    .nightMarket h2 {
+        font-size: 36px;
+        width: 530px;
+        height: 96px;
+        margin: 22px 103px 80px 733px;
+        text-align: center;
+        position: relative;
+        top: 22px;
+        left: 10px;
+        margin: 22px 103px 80px 733px;
+        text-align: center;
+    }
+    .nightMarket h2 span {
+        font-size: 24px;
+    }
+    .nightMarketBackImg img {
+        width: 530px;
+        height: 96px;
+        position: relative;
+        left: 650px;
+        top: -10px;
+    }
+    .sentence {
+        font-size: 20px;
+        width: 420px;
+        height: 192px;
+        margin: 36px auto;
+        margin-left: 143px;
+        line-height: 1.5;
+    }
+    .line2 {
+        width: 420px;
+        margin-top: 0;
+        margin: initial;
+        margin-left: 143px;
+        border-bottom: 1px solid;
+    }
+    .pcMarketImg1 {
+        width: 540px;
+        height: 264px;
+        position: absolute;
+        left: 723px;
+        top: 170px;
+    }
+    .marketImg {
+        display: none;
+    }
+    .pcMarketImg2 {
+        width: 540px;
+        height: 264px;
+        position: absolute;
+        left: 723px;
+        top: 570px;
+    }
+    /* 夜市ボタン */
+    .frameBtn {
+        width: 450px;
+        margin: initial;
+        margin-left: 130px;
+        margin-top: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }
+    .frameBtn li {
+        width: 210px;
+        height: 90px;
+        margin: 18px 0;
+    }
+    .marketName {
+        font-weight: bold;
+    }
+    .openBtn1 {
+        position: absolute;
+        left: 185px;
+        top: 610px;
+    }
+    .openBtn2 {
+        position: absolute;
+        left: 390px;
+        top: 610px;
+    }
+    .openBtn3 {
+        position: absolute;
+        left: 185px;
+        top: 735px;
+    }
+    .openBtn4 {
+        position: absolute;
+        left: 425px;
+        top: 735px;
+    }
+    /* アクセス */
+    .access {
+        position: relative;
+    }
+    .access h2 {
+        font-size: 36px;
+        width: 322px;
+        height: 48px;
+        margin: 44px 837.5px 80px 206.5px;
+        text-align: center;
+        position: relative;
+        top: 30px;
+        left: -10px;
+    }
+    .access h2 span {
+        font-size: 24px;
+    }
+    .accessBackImg img {
+        width: 530px;
+        height: 96px;
+        position: relative;
+        left: 20px;
+        top: -10px;
+    }
+    .pcAccessImg {
+        width: 1160px;
+        height: 336px;
+        margin: 80px auto;
+    }
+    .accessImg {
+        display: none;
+    }
+    .sentence2 {
+        width: 384px;
+        height: 24px;
+        margin-left: 175px;
+    }
+    .line6 {
+        width: 420px;
+        margin-left: 157px;
+    }
+    .pcCardImg {
+        width: 246px;
+        height: 155px;
+        margin: 40px 280px 80px 844px;
+    }
+    .cardImg {
+        display: none;
+    }
+    .accessInfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 1040px;
+        margin: 0 auto;
+        /* height: 832px; */
+    }
+    .accessInfo p {
+        width: 400px;
+        height: 268.8px;
+        margin-left: initial;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .transportation {
+        width: 480;
+        height: 406;
+        margin: 0 40px;
+    }
+    h4 {
+        margin-left: 0;
+        margin-bottom: 40px;
+        letter-spacing: -.1em;
+        text-align: center;
+    }
+    .payInfo h4 {
+        letter-spacing: -.15em;
+    }
+    .payInfo span {
+        display: none;
+    }
+    .pc {
+        display: initial;
+    }
+    .mp {
+        display: none;
+    }
+
+    /* フッター */
+    footer {
+        height: 489px;
+    }
+    .pcNationalFlag {
+        width: 64px;
+        height: 48px;
+        margin: 0 auto 28px;
+        padding: 40px 0;
+    }
+    .nationalFlag {
+        display: none;
+    }
+    .footerLine {
+        border-bottom: 1px solid;
+        width: 332px;
+        margin: initial;
+        margin-left: 103px;
+        margin-bottom: 20px;
+    }
+    footer nav ul li {
+        margin: initial;
+        margin-left: 103px;
+    }
+    .footerIcon {
+        width: 182.9px;
+        height: 32px;
+        position: absolute;
+        right: 103px;
+        bottom: 81px;
+        /* margin: 0px 103px 20px 1080.1px; */
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .border2 {
+        border-top: 1px solid #03A9F4;
+        margin: 20px 0;
+    }
+    .pcFooterLogo {
+        position: absolute;
+        width: 256px;
+        height: 103px;
+        /* margin: 0 auto; */
+        top: 280px;
+        left: 555px;
+    }
+    .footerLogo {
+        display: none;
+    }
+    .footerEnd {
+        margin: initial;
+        text-align: center;
+        position: absolute;
+        left: 577px;
+        top: 440px;
+        font-size: 12px;
+    }
+    .frameBorder2 {
+        border: 1px solid #FF0000;
+        margin: 0px auto;
+        width: 1200px;
+        height: 489px;
+        position: absolute;
+        top: 0px;
+        left: 83px;
+        pointer-events: none;
+    }
+    /* 新モーダル */
+.marketName {
+    font-weight: bold;
+}
+.modalOpen1 {
+    position: absolute;
+    top: 3220px;
+    left: 190px;
+}
+.modalOpen2 {
+    position: absolute;
+    top: 3220px;
+    left: 390px;
+}
+.modalOpen3 {
+    position: absolute;
+    top: 3345px;
+    left: 190px;
+}
+.modalOpen4 {
+    position: absolute;
+    top: 3345px;
+    left: 425px;
+}
+.modalContainer1 {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer2 {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer3 {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalContainer4 {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:375;
+    height: 667;
+}
+.modalBody {
+    font-size: 20px;
+    position: relative;
+    width: 1366px;
+    height: 604px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(1,128,190,1);
+    color: #ffffff;
+    text-align: center;
+}
+h3 {
+    width: 100%;
+    height: 36px;
+    margin-top: 40px;
+    margin-left: 103px;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+.modalBody img {
+    width: 600px;
+    height: 468px;
+    margin-bottom: 40px;
+    position:absolute;
+    left: 103px;
+}
+.modalBody p {
+    width: 500px;
+    height: 192px;
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    position: absolute;
+    right: 103px;
+    text-align: initial;
+}
+.modalBody ul {
+    position: absolute;
+    right: 270px;
+    bottom: 10px;
+}
+.modalBody ul li {
+    line-height: 1.5;
+}
+.modalClose1 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose2 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose3 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.modalClose4 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+.marketInfo {
+    display: flex;
+}
+/* 新モーダル終わり */
+
+    /* 臼井さんからの提供 */
+    .loading img{
+        top: 45%;
+        width: 287px;
+        height: 117px;
+      }
+    /* 臼井さんからの提供終わり */
+}
