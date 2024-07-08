@@ -1,0 +1,1050 @@
+@charset "UTF-8";
+
+.wrap{
+    overflow: hidden;
+}
+/*
+共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Zen Kaku Gothic New
+font-size: ベースSP12px　PC20px
+                 4の倍数
+見出しfont-size: SP→24,12px,PC→48.24px
+ＳＰ幅:375px 
+PC幅:1366px
+
+カラーコード
+007AB7：青
+007AB7の透明度90％：ほぼ青
+6CBAD8の透明度20％：水色
+000000：黒
+FFFFFF：白
+EDA184の透明度20％：ピンク
+64C99Bの透明度20％：緑
+F4F4F4：ほぼ白のグレー
+000000の透明度25％：薄いグレー
+8F8F8F：グレー
+*/
+.logo1{
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    z-index: 30;
+}
+.drawer{
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.loading{
+	background: #007AB7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.loading img{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+}
+
+@media screen and (max-width: 768px){
+    .loading img{
+        top: 45%;
+        width: 287px;
+        height: 117px;
+      }
+    header{
+        background: url(../images/fulltaichu.png) no-repeat center/cover;
+        height: 667px;
+        width: 100%;
+        position: relative;
+    }
+    #pc,.pc{
+        display: none;
+    }
+
+     /*drawer開始*/
+   .drawerNav {
+    display: block;
+    position: fixed;
+    top: 0;
+    /* ナビゲーションを表示させる位置を指定する */
+    right: -1800px;
+    bottom: 0;
+    /* メニューアイコンを押下した際のナビゲーションメニューの横幅を指定する */
+    width: 225px;;
+    background: RGBA(0,0,0,70%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s;
+    z-index: 4;
+    opacity: 0;
+  }
+  .open .drawerNav {
+    /* ナビゲーションの表示位置を指定する */
+    right: 0;
+    /* ナビゲーションの透過率を指定する */
+    opacity: 1;
+  }
+  .inner{
+    font-family: Zen Kaku Gothic New;
+    font-weight: bold;
+    padding: 0;
+  }
+  .drawerLogo{
+    margin: 8px 0 0 12px;
+  }
+  .inner p{
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin: 84px 0 60px;
+  }
+  .inner ul{
+    display: inlineblock;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .inner ul li{
+    text-align: center;
+  }
+  .inner ul li a{
+    display: inlineblock;
+    color: #ffffff;
+    font-size: 20px;
+    transition-duration: 0.2s;
+    text-decoration:none;
+    border-bottom: #ffffff 1px solid;
+  }
+  .item1{
+    margin-bottom: 40px;
+  }
+  .item2{
+    margin-bottom: 20px;
+  }
+  /*toggle_btn*/
+  .toggleBtn {
+    display: block;
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  /*close_btn*/
+  .drawercloseBtn {
+    position: absolute;
+    color: #fff ;
+    cursor: pointer;
+    /* 非表示にしたハンバーガーメニューの変わりにCLOSEを表示する位置を指定する   */
+    top: 4px;
+    right: 4px;
+    z-index: 4;
+  }
+  /*mask*/
+   #mask  {
+    display: none;
+    transition: all .5s;
+  }
+  /* ナビゲーションが展開された部分の外側余白を指定する */
+  .open #mask  {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+    /*drawer終了*/
+  }
+}
+
+.mainLogo{
+    position: absolute;
+    top: 28px;
+    margin: 88px;
+    width: 199px;
+    height: 372px;
+}
+.facebook1{
+    position: absolute;
+    top: 451px;
+    left: 20px;
+}
+.instagram1{
+    position: absolute;
+    top: 503px;
+    left: 20px;
+}
+.twitter1{
+    position: absolute;
+    top: 555px;
+    left: 20px;
+}
+.topView p{
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    width: 247px;
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: inline-block;
+    letter-spacing: -0.09em;
+}
+.breadcrumb ol{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 675px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 50;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+}
+.breadcrumb li{
+    cursor: pointer;
+    z-index: 50;
+    font-family: Zen Kaku Gothic New;
+}
+.breadcrumb li:not(:last-of-type)::after {
+    content: "＞";
+    margin: 0 .6em; /* 記号の左右の余白 */
+    color: #000000; /* 記号の色 */
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+  }
+.breadcrumb::after{
+    content:'';
+    width: 100%; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute;
+    top: 699px;
+}
+/*header終了*/
+
+.contentTitle1{
+    position: relative;
+}
+.contentTitle1 img{
+    padding: 48px 77.5px 0 77.5px;
+}
+h2{
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    position: absolute;
+    left: 108px;
+    top: 60px;
+}
+h2 span{
+    font-size: 0.5em;
+    font-family: Zen Kaku Gothic New;
+}
+h3{
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    font-weight: bold;
+    margin: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.16em;
+}
+.main1{
+    position: relative;
+}
+.koubi1,.koubi2{
+    padding:0 20px;
+}
+.koubi1 img{
+    max-width: 100%;
+    padding: 0 20px 20px;
+}
+.koubi1 p{
+    background-color: RGBA(237,161,132,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 36px;
+    margin: 0 20px 20px 20px;
+    letter-spacing: -0.02em;
+}
+.koubi2 img{
+    width: 100%;
+    padding: 0 20px 20px;
+}
+.koubi2 p{
+    background-color: RGBA(237,161,132,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 32px;
+    margin: 0 20px 40px 20px;
+}
+.main1::after{
+    content:'';
+    width: 223px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+}
+/*main1終了*/
+
+.main2{
+    position: relative;
+}
+.main2 h3{
+    padding-top: 40px;
+}
+.saikou1,.saikou2{
+    padding: 0 20px;
+}
+.saikou1 img{
+    width: 100%;
+    padding: 0 20px 20px;
+}
+.saikou1 p{
+    background-color: RGBA(237,161,132,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 36px;
+    margin: 0 20px 20px 20px;
+    letter-spacing: -0.02em;
+}
+.saikou2 img{
+    width: 100%;
+    padding: 0 20px 20px;
+}
+.saikou2 p{
+    background-color: RGBA(237,161,132,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 32px;
+    margin: 0 20px 40px 20px;
+}
+.main2::after{
+    content:'';
+    width: 223px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+}
+/*観光名所終了*/
+
+.contentTitle2{
+    position: relative;
+}
+.contentTitle2 img{
+    padding: 48px 77.5px 0 77.5px;
+}
+.contentTitle2 h2{
+    top: 60px;
+    left: 124.5px;
+}
+.contentTitle2 p{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    margin: 60px 56px 72px 56px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px #FFFFFF;
+    border-right: 1px #FFFFFF;
+    padding: 12px 0;
+    letter-spacing: 0.16em;
+}
+h5{
+    font-size: 12px;
+    font-family:  Zen Kaku Gothic New;
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+h4{
+    font-size: 12px;
+    font-weight: bold;
+    font-family:  Zen Kaku Gothic New;
+    margin-left: 20px;
+}
+.museum1,.museum2,.museum3{
+    padding: 0 20px 40px;
+}
+.museum1 img,.museum2 img,.museum3 img,.museum4 img{
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.museum4{
+    padding: 0 20px 40px;
+    position: relative;
+}
+.openBtn1,.openBtn2,.openBtn3,.openBtn4{
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 4px solid RGBA(237,161,132,20%);
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 207px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+}
+.modalBg{
+    position: fixed;
+    z-index: 10009;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease;
+}
+.modalBg.is-active{
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+}
+.modalInner{
+    position: fixed;
+    z-index: 10010;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 10px;
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease;
+} 
+.modalInner.is-active{
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+}
+.modalWin{
+    width: 375px;
+    height: 426.6px;
+    background: #0180BE;
+    filter: drop-shadow(0 0 10px rgba(0 ,0, 0, 0.4));
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    transform: translate3d(0, 48px, 0);
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease, transform .3s ease-in-out;
+}  
+.modalWin.is-active{
+    z-index: 2;
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+    transform: translate3d(0, 0, 0);
+}
+.modalHead{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Zen Kaku Gothic New;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}  
+.modalWinText{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Zen Kaku Gothic New;
+    line-height: 1.6;
+}
+.modalWinText img{
+    width: 46%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.museumModalSub{
+    margin-right: 20px;
+}
+.modalWinCloseBtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.museum4::after{
+    content:'';
+    width: 223px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+    bottom: 0;
+}
+/*美術館　終了*/
+
+.contentTitle3{
+    position: relative;
+}
+.contentTitle3 img{
+    padding: 60px 77.5px 0 77.5px;
+}
+.contentTitle3 h2{
+    top: 67.8px;
+    left: 123.5px;
+}
+h6{
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    padding: 60px 140px 12px 139px;
+    display: inline-block;
+}
+.sweetTop{
+    border-top: 1px solid #000000;
+    padding: 12px;
+    border-right: #FFFFFF 1px;
+    border-left: #FFFFFF 1px;
+    border-bottom: #FFFFFF 1px;
+}
+.sweets1 p{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    margin: 0 76px 8px;
+}
+.sweets1 img{
+    width: 100%;
+    padding: 0 76px 20px;
+}
+.sweets2{
+    display:flex;
+}
+.miyahara1{
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 42%;
+}
+.miyahara2{
+    width: 42%;
+}
+.sweets3{
+    position: relative;
+}
+.sweets3 p{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 20px 76px 20px;
+}
+.sweets3 img{
+    width: 100%;
+    padding: 0 76px 80px;
+}
+.sweets3::after{
+    content:'';
+    width: 223px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+    bottom: 40px;
+}
+#pageTop img{
+    width: 48px;
+    height: 48px;
+    position:fixed;
+    right: 4px;
+    bottom: 35%;
+    cursor:pointer;
+    z-index: 10;
+}
+
+.frameBorder1 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 335px;
+    height: 4660px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+.frameBorder2 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 335px;
+    height: 345px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+
+footer{
+    background-color: #007AB7;
+    width: 100%;
+    padding:20px 20px 0;
+    position: relative;
+}
+.country{
+    width: 32px;
+    height: 24px;
+    display: block;
+    margin: auto;
+}
+.footerNavi{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 20px 70px 40px 70px;
+    color: #FFFFFF;
+}
+.footerNavi li{
+    margin-bottom: 12px;
+    border-bottom: #FFFFFF 1px solid;
+}
+.logo2{
+    width: 71px;
+    height: 28px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+.facebook2{
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+.instagram2{
+    margin-right: 20px;
+    margin-bottom: 12px;
+}
+.twitter2{
+    margin-bottom: 12px;
+}
+footer p{
+    font-size: 8px;
+    font-family: Zen Kaku Gothic New;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: solid 1px #03A9F4;
+    padding: 12px 0 12px 0;
+}
+
+@media screen and (min-width: 768px){
+    #sp, .sp{
+        display: none;
+    }
+    #pc{
+        object-fit: cover;
+    }
+    .drawer{
+        display: none;
+    }
+    /*drawernavi*/
+    .pcNav{
+        margin-left: 580px;
+        padding-top: 50px;
+    }
+    .pcNav ul li{
+        list-style: none;
+        display: inline-block;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: Zen Kaku Gothic New;
+    }
+    .item3{
+        margin-right: 20px;
+    }
+    header{
+        background: url(../images/pcfulltaichu.png) no-repeat center/cover;
+        height: 768px;
+        width: 1366px;
+        position: relative;
+    }
+    .logo1{
+        width: 133px;
+        height: 54px;
+        top: 20px;
+        left: 103px;
+    }
+    .mainLogo{
+        top: 94px;
+        left: 363px;
+    }
+    .facebook1{
+        top: 512px;
+        left: 103px;
+    }
+    .instagram1{
+        top: 584px;
+        left: 103px;
+    }
+    .twitter1{
+        top: 656px;
+        left: 103px;
+    }
+    .frameBorder1 {
+        width: 1200px;
+        left: 83px;
+    }
+    .topView p{
+        bottom: 20px;
+        left: 796px;
+        font-size: 20px;
+        width: 467px;
+        letter-spacing: -0.01em;
+    }
+    .breadcrumb ol{
+        top: 788px;
+        left: 103px;
+        font-size: 20px;
+    }
+    .breadcrumb::after{
+        top: 828px;
+    }
+    /*header終了*/
+
+    .contentTitle1 img{
+        padding: 80px 0 0 103px;
+    }
+    h2{
+        font-size: 48px;
+        top: 104px;
+        left: 206.5px;
+    }
+    h3{
+        font-size: 36px;
+        text-align: start;
+        padding: 80px 0 20px 103px;
+        margin: 0;
+    }
+    .koubi1 img,.koubi2 img,.saikou1 img,.saikou2 img{
+        width: 600px;
+        margin: 0 60px 40px 103px;
+        padding: 0;
+    }
+    .koubi1 img{
+        height: 360px;
+    }
+    .koubi2 img{
+        height: 144px;
+    }
+    .koubi1,.koubi2,.saikou1,.saikou2{
+        display: flex;
+        padding: 0;
+    }
+    .koubi1 p,.koubi2 p,.saikou1 p,.saikou2 p{
+        font-size: 20px;
+    }
+    .koubi1 p{
+        margin: 0 0 40px 0 ;
+        padding: 20px 40px;
+        letter-spacing: -0.028em;
+        width: 500px;
+        height: 360px;
+        line-height: 1.6;
+    }
+    .koubi2 p{
+        padding: 40px;
+        letter-spacing: -0.1em;
+        width: 500px;
+        height: 144px;
+        margin: 0;
+        line-height: 1.6;
+    }
+    .koubi2,.saikou2{
+        padding-bottom: 160px;
+    }
+    .main1::after,.main2::after{
+        width: 480px; /* 線の幅 */
+        bottom: 80px;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);  /* transformがセンタリングしたい要素の縦、横幅分を引いてくれるので中央になる */
+    }
+    /*main1終了*/
+
+    .main2 h3{
+        padding-top: 0;
+    }
+    .saikou1 p{
+        margin: 0 0 40px 0 ;
+        padding: 40px;
+        letter-spacing: -0.028em;
+        width: 500px;
+        height: 368px;
+        line-height: 1.6;
+    }
+    .saikou2 p{
+        padding: 41.86px 40px 38.14px;
+        letter-spacing: 0.00em;
+        width: 500px;
+        height: 144px;
+        margin: 0;
+        line-height: 1.6;
+    }
+    /*main2終了*/
+
+    .contentTitle2 img{
+        padding: 20px 0 0 ;
+        margin-left: 733px;
+    }
+    .contentTitle2 h2{
+        left: 868.5px;
+        top: 44px;
+    }
+    .contentTitle2 p{
+        display: inline-block;
+        width: 420px;
+        height: 110px;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        margin: 80px 170px 80px 143px;
+        padding: 20px 0 32.4px;
+        line-height: 1.6;
+    }
+    h5{
+        font-size: 36px;
+        margin-left: 2px;
+        margin-bottom: 16px;
+    }
+    h4{
+        font-size: 36px;
+        font-weight: bold;
+        margin-left: 2px;
+        margin-bottom: 20px;
+    }
+    .museum{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .museum1,.museum2,.museum3,.museum4{
+        width: 530px;
+        height: 501.2px;
+        margin-left: 123px;
+        padding: 0;
+    }
+    .museum1 img,.museum2 img,.museum3 img,.museum4 img{
+        padding: 0;
+        width: 530px;
+        height: 270px;
+    }
+    .museum2,.museum4{
+        margin-left: 60px;
+    }
+    .openBtn1,.openBtn2,.openBtn3,.openBtn4{
+        font-size: 20px;
+        padding: 27px 36px 29px;
+        margin: 20px 0 0 308px;
+    }
+    .museum4{
+        margin-bottom: 160px;
+    }
+    .museum4::after{
+        display: none;
+    }
+    .museum::after{
+        position: absolute;
+        content:'';
+        height: 1px; /* 線の高さ */
+        background-color: #000000; /* 線の色 */
+        width: 480px; /* 線の幅 */
+        bottom: 80px;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);  /* transformがセンタリングしたい要素の縦、横幅分を引いてくれるので中央になる */
+    }
+    /*museum終了*/
+
+    .modalWin{
+        width: 900px;
+        height: 630.2px;
+        padding: 20px 40px 40px;
+        position: absolute;
+        z-index: 1;
+        transform: translate3d(0, 48px, 0);
+        opacity: 0; /* 初期状態で非表示 */
+        visibility: hidden; /* 初期状態で非表示 */
+        transition: opacity .6s ease, visibility .6s ease, transform .3s ease-in-out;
+    }  
+    .modalHead{
+        font-size: 36px;
+        margin: 0 0 40px;
+        text-align: start;
+    }  
+    .modalWinText{
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.6;
+    }
+    .modalWinText img{
+        width: 45.5%;
+        margin-bottom: 20px;
+    }
+    .museumModalSub{
+        margin-right: 60px;
+    }
+    .modalWinCloseBtn{
+        top: 20px;
+        right: 20px;
+    }
+
+    /*モーダル*/
+
+    .contentTitle3 img{
+        padding: 20px 0 0 103px;
+    }
+    .contentTitle3 h2{
+        top: 44px;
+        left: 237.5px;
+    }
+    h6{
+        padding: 80px 0 20px 296px;
+        font-size: 36px;
+    }
+    .sweetTop{
+        padding: 20px;
+    }
+    .sweets1 p{
+        font-size: 20px;
+        margin: 0 0 60px 158px;
+        width: 420px;
+        letter-spacing: -0.12em;
+        line-height: 1.5;
+    }
+    .sweets1 img{
+        width: 560px;
+        height: 346px;
+        padding: 0;
+        margin: 0 60px 60px 123px;
+    }
+    .sweets1Ex p{
+        margin: 0 123px 60px 0;
+        padding: 58px 40px 64px;
+        letter-spacing: -0.021em;
+        line-height: normal;
+        width: 500px;
+    }
+    .sweets1Ex{
+        display: flex;
+    }
+    .sweets2 img{
+        width: 400px;
+        height: 600px;
+    }
+    .miyahara1{
+        margin: 0 160px 60px 203px;
+    }
+    .sweets3{
+        display: flex;
+    }
+    .sweets3 img{
+        width: 560px;
+        height: 346px;
+        padding: 0;
+        margin: 0 123px 160px 0;
+    }
+    .sweets3 p{
+        margin: 0 60px 160px 123px;
+        padding: 128px 40px 122px;
+        font-size: 20px;
+        width: 500px;
+    }
+    .sweets{
+        position: relative;
+    }
+    .sweets::after{
+        position: absolute;
+        content:'';
+        height: 1px; /* 線の高さ */
+        background-color: #000000; /* 線の色 */
+        width: 480px; /* 線の幅 */
+        bottom: 80px;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);  /* transformがセンタリングしたい要素の縦、横幅分を引いてくれるので中央になる */
+    }
+    .sweets3::after{
+        display: none;
+    }
+    /*sweets終了*/
+
+    .frameBorder1 {
+        border: 1px solid #FF0000;
+        margin: 0px auto;
+        width: 1200px;
+        height: 6215px;
+        position: absolute;
+        top: 0px;
+        left: 83px;
+        pointer-events: none;
+    }
+    .frameBorder2 {
+        display: none;
+    }
+    #pageTop img{
+        width: 100px;
+        height: 100px;
+        right: 20px;
+    }
+
+    footer{
+        padding: 40px 0 0;
+        position: relative;
+    }
+    .country {
+        width: 64px;
+        height: 48px;
+    }
+    .footerNavi{
+        width: 332px;
+        padding: 0;
+        margin: 28px 0 20px 103px;
+        font-size: 20px;
+    }
+    .footerNavi li{
+        margin-bottom: 32px;
+    }
+    .logo2{
+        width: 256px;
+        height: 103px;
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 376px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .facebook2{
+        margin: 0;
+        position: absolute;
+        left: 70%;
+        top: 376px;
+    }
+    .instagram2{
+        margin: 0;
+        position: absolute;
+        left: 75%;
+        top: 376px;
+    }
+    .twitter2{
+        margin: 0;
+        position: absolute;
+        left: 80%;
+        top: 376px;
+    }
+    footer p{
+        font-size: 12px;
+        padding: 20px;
+    }
+}
