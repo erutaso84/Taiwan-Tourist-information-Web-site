@@ -1,0 +1,1025 @@
+@charset "UTF-8";
+@media only screen and (max-width: 768px) {
+    #pc { display: none; }
+    #sp { display: block; }
+    
+}
+
+
+/*
+共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Zen Kaku Gothic New
+font-size: ベースSP12px　PC20px
+                 4の倍数
+見出しfont-size: SP→24,12px,PC→48.24px
+ＳＰ幅:375px 
+PC幅:1366px
+
+カラーコード
+007AB7：青
+007AB7の透明度90％：ほぼ青
+6CBAD8の透明度20％：水色
+000000：黒
+FFFFFF：白
+EDA184の透明度20％：ピンク
+64C99Bの透明度20％：緑
+F4F4F4：ほぼ白のグレー
+000000の透明度25％：薄いグレー
+8F8F8F：グレー
+*/
+
+/* ローディング */
+.loading{
+	background: #007AB7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.loading img{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+}
+
+/* ヘッダー */
+/* .loading{
+	background: #007AB7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+.loading img{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+} */
+body{
+   width: 100%;
+   height: 100%;
+}
+.logo1{
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    z-index: 30;
+}
+.drawer{
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+header{
+    background: url(../images/hi-ro-furu.png) no-repeat;
+    height: 667px;
+    position: relative;
+}
+.mainLogo{
+    position: absolute;
+    top: 28px;
+    margin: 88px;
+    width: 199px;
+    height: 372px;
+}
+.facebook1{
+    position: absolute;
+    top: 451px;
+    left: 20px;
+}
+
+
+.instagram1{
+    position: absolute;
+    top: 503px;
+    left: 20px;
+}
+
+
+.twitter1{
+    position: absolute;
+    top: 555px;
+    left: 20px;
+}
+
+
+
+.topView p {
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    width: 247px;
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: inline-block;
+    padding-right: 20px;
+    letter-spacing: -0.09em;
+}
+
+/* パンくず */
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    margin-left: 1px;
+    margin-top: 1px;
+    cursor: pointer;
+    z-index: 120;
+}
+.breadcrumb li {
+    cursor: pointer;
+    z-index: 120;
+}
+.breadcrumb li:not(:last-of-type)::after {
+    content: "＞";
+    margin: 0 .6em; /* 記号の左右の余白 */
+    color: #000000; /* 記号の色 */
+  }
+
+.breadcrumb::after {
+    content:'';
+    width: 100%; 
+    height: 1px; 
+    background-color: #000000; 
+    position: absolute;
+    top: 699px;
+}
+
+
+/* メイン */
+
+main {
+    text-align: center;
+  
+}
+.contentTitle13{
+    position: relative;
+    height: 0;
+    /* background:url(../images/見出し背景画像.png) no-repeat center center/contain; */
+    margin-bottom: 20px;
+
+}
+
+
+
+/* .contentTitle13 img{ */
+    /* width: 100%; */
+    /* padding: 48px 77.5px 0 77.5px; */
+    /* padding: 100px 77.5px 100px 77.5px; */
+    
+    
+/* } */
+/* .contentTitle13 h1 { */
+    /* font-size: 24px; */
+    /* font-family: Zen Kaku Gothic New; */
+    /* left: 50%; */
+    /* top: 50%; */
+    /* text-align: center; */
+    /* font-size: 24px; */
+    /* font-family: Zen Kaku Gothic New; */
+    /* position: absolute; */
+    /* left: 108px; */
+    /* top: 60px; */
+/* } */
+.h1Title{
+    text-align: center;
+    /* padding-left:100px; */
+    /* padding-right: 100px; */
+    background:url(../images/midasihaikei.png) no-repeat center center;
+    margin-top: 50px;
+    width: 58%;
+    margin: auto;
+    margin-top: 17px;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    padding: 10%;
+    text-align: center;
+}
+h1 span{
+    font-size: 12px;
+    width: 158px;
+    height: 24px;
+    top: 12px;
+    left: 116px;
+    font-family: Zen Kaku Gothic New;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.main1 h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 32px;
+    font-family: Zen Kaku Gothic New;
+    margin-bottom: 8px;
+}
+h4 {
+    font-size: 16px;
+    font-family: Zen Kaku Gothic New;
+    margin-bottom: 8px;
+}
+h5 {
+    font-size: 24px;
+    font-family: Zen Kaku Gothic New;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+.Pickup1 line{
+    margin-top: 50px;
+}
+
+.anpin1 p{
+    /* width: 295px;
+    height: 221px;
+    margin: 20px auto;
+    padding: 0 20px 20px; */
+    width: 79%;
+    margin: auto;
+}
+.anpin1 p img{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container p{
+    width: 36%;
+}
+
+.anpin2 img {
+    width: 137.5px;
+    height: 150px;
+  
+}
+.text {
+    background-color: RGBA(100,201,155,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 36px;
+    margin: 0 20px 40px 20px;
+    letter-spacing: -0.02em;
+}
+/* .sekkanrou1 p { */
+    /* background-color: RGBA(100,201,155,20%); */
+    /* font-size: 12px; */
+    /* font-family: Zen Kaku Gothic New; */
+    /* padding: 8px 32px; */
+    /* margin: 0 20px 40px 20px; */
+/* } */
+.sekkanrou1 img {
+    max-width: 100%;
+    margin: 0 auto;
+    /* width: 295px; */
+    /* height: 221px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sekkanrou1 p img{
+    width: 79%;
+    
+}
+/* .sekkanrou2 p { */
+    /* background-color: RGBA(100,201,155,20%); */
+    /* font-size: 12px; */
+    /* font-family: Zen Kaku Gothic New; */
+    /* padding: 8px 32px; */
+    /* margin: 0 20px 40px 20px; */
+/* } */
+.sekkanrou2 img {
+    width: 137.5px;
+    height: 150px;
+}
+.sekkanrouImg1 {
+    margin-right: 10px;
+}
+.sekkanrouImg2 {
+    margin-left: 10px;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.container3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container2 p img{
+    width: 84%;
+}
+
+
+.squareText {
+    background-color: RGBA(100,201,155,20%);
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 8px 32px;
+    margin: 50px 20px 40px 20px;
+}
+.gourmet p{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    line-height: 19.2px;
+    /* padding: 8px 32px; */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 76px;
+    margin-right: 76px;
+}
+.gourmet{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.gourmetText{
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.gourmet0 p img{
+    width: 89%;
+    margin: auto;
+    margin-bottom: 8px;
+}
+.gourmet1 img {
+    width: 335px;
+    height: 130px;
+}
+.gourmet2 img {
+    width: 335px;
+    height: 130px;
+}
+.gourmet3 img {
+    width: 335px;
+    height: 130px;
+}
+.gourmet4 img {
+    width: 335px;
+    height: 130px;
+}
+.goulmt1 p {
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    letter-spacing: 19.2px;
+}
+.openBtn1,.openBtn2,.openBtn3,.openBtn4{
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 4px solid RGBA(237,161,132,20%);
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 180px;
+    text-align: center;
+    cursor: pointer;
+}
+.modalBg{
+    position: fixed;
+    z-index: 10009;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease;
+}
+.modalBg.is-active{
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+}
+.modalInner{
+    position: fixed;
+    z-index: 10010;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 10px;
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease;
+} 
+.modalInner.is-active{
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+}
+.modalWin{
+    width: 375px;
+    height: 426.6px;
+    background: #f4f4f4;
+    filter: drop-shadow(0 0 10px rgba(0 ,0, 0, 0.4));
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    transform: translate3d(0, 48px, 0);
+    opacity: 0; /* 初期状態で非表示 */
+    visibility: hidden; /* 初期状態で非表示 */
+    transition: opacity .6s ease, visibility .6s ease, transform .3s ease-in-out;
+}  
+.modalWin.is-active{
+    position: relative;
+    z-index: 2;
+    opacity: 1; /* 非表示を解除 */
+    visibility: visible; /* 非表示を解除 */
+    transform: translate3d(0, 0, 0);
+}
+.modalHead{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Zen Kaku Gothic New;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}  
+.modalWinText{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Zen Kaku Gothic New;
+    line-height: 1.6;
+}
+.modalWinText img{
+    width: 283px;
+    height: 283px;
+    margin: 46px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.museumModalSub{
+    margin-right: 20px;
+}
+.modalWinCloseBtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.squareText2 {
+
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    /* padding: 8px 32px; */
+    /* margin: 0 20px 40px 20px; */
+    margin: 0 76px 8px;
+    line-height: 19.2px;
+    margin-top: 24px;
+}
+.Pickup1 img{
+    width: 59%;
+    margin: auto;
+}
+/* .Pickup2 { */
+    /* display: flex; */
+/* } */
+.Pickup3 img {
+    width: 47%;
+    margin: auto;
+}
+.pickupImg1 {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.pickupImg2 {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.anpinImg1 {
+    margin-right: 10px;
+}
+.anpinImg2 {
+    margin-left: 10px;
+}
+
+/* 赤枠 */
+.frameBorder1 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 89%;
+    height: 5500px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+.frameBorder2 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 89%;
+    height: 450px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+/* フッター */
+
+footer{
+    background-color: #007AB7;
+    /* width: 100%; */
+    padding:20px 20px 0;
+    position: relative;
+}
+.country{
+    width: 32px;
+    height: 24px;
+    display: block;
+    margin: auto;
+}
+.footerNavi{
+    font-size: 12px;
+    font-family: Zen Kaku Gothic New;
+    padding: 20px 70px 40px 70px;
+    color: #FFFFFF;
+}
+.footerNavi li{
+    margin-bottom: 12px;
+    border-bottom: #FFFFFF 1px solid;
+}
+.logo2{
+    width: 71px;
+    height: 28px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+.facebook2{
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+.instagram2{
+    margin-right: 20px;
+    margin-bottom: 12px;
+}
+.twitter2{
+    margin-bottom: 12px;
+}
+footer p{
+    font-size: 8px;
+    font-family: Zen Kaku Gothic New;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: solid 1px #03A9F4;
+    padding: 12px 0 12px 0;
+}
+/* 下線 */
+.line {
+    content:'';
+    width: 223px; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute; /* position: relative;からの線の絶対位置 */
+    left: 76px;
+ 
+}
+.line1 {
+    content:'';
+    width: 100%; /* 線の幅 */
+    height: 1px; /* 線の高さ */
+    background-color: #000000; /* 線の色 */
+    position: absolute;
+    top: 699px;
+}
+
+/* レスポンシブ */
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+
+
+@media screen and (min-width: 768px){
+
+    
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+#pc { display: block !important; }
+#sp { display: none !important; }
+ 
+
+    /* #sp{ */
+        /* display: none; */
+    /* } */
+    /* #pc{ */
+        /* display: block; */
+    /* } */
+    /* .drawer{ */
+        /* display: none; */
+    /* } */
+    /* header{ */
+        /* background: url(../images/ヒーローフル台南画像.png) no-repeat center/cover; */
+        /* height: 768px; */
+        /* width: 100%; */
+        /* position: relative; */
+    /* } */
+    main{
+        padding: 0 83px;
+    }
+  .pcMain{
+    /* background: url(../images/PCヒーローフル台南画像.png)no-repeat; */
+    height: 768px;
+  }
+  .pcLogo{
+    margin-left: 363px;
+    margin-top: -690px;
+    height: 539.82px;
+    width: 300px;
+  }
+  .logo1{
+    margin-left: 103px;
+  }
+  .topView p{
+    margin-bottom: 20px;
+    margin-right: 103px;
+  }
+    .mainLogo{
+        top: 94px;
+        left: 363px;
+    }
+    .facebook1{
+        top: 512px;
+        left: 103px;
+    }
+    .instagram1{
+        top: 584px;
+        left: 103px;
+    }
+    .twitter1{
+        top: 656px;
+        left: 103px;
+    }
+    .frameBorder1 {
+        width: 1200px;
+        left: 83px;
+    }
+    .topView p{
+        bottom: 20px;
+        left: 796px;
+        font-size: 20px;
+        width: 467px;
+        letter-spacing: -0.01em;
+        /* margin-bottom: 20px; */
+    /* margin-left: 103px; */
+    }
+    .breadcrumb ol{
+        top: 788px;
+        left: 103px;
+        font-size: 20px;
+    }
+    .h1Title{
+        margin-top: 100px;
+        background: url(../images/PCmidasihaikei.png)no-repeat center center;
+        font-size: 44px;
+        margin-left: 0%;
+    }
+    h1 span{
+        font-size: 24px;
+        line-height: 24px;
+
+    }
+    h2{
+        font-size: 36px;
+        letter-spacing: 30%;
+        line-height: 36px;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 36px;
+        font-family: Zen Kaku Gothic New;
+    }
+    h4{
+        font-size: 24px;
+        font-family: Zen Kaku Gothic New;
+        line-height: 24px;
+
+    }
+    h5{
+
+        margin-top: 200px;
+    }
+    .main1 p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .main2 p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .content1 h1{
+        margin-left: 206.5px;
+    } 
+    .anpin1{
+        display: flex;
+    }
+    
+    .anpin1 img{
+        width: 600px;
+        height: 304px;
+        /* margin-right: 103px; */
+        max-width: 100%;
+
+    }
+
+    
+    .text {
+        /* padding: 0; */
+        margin: 0;
+        margin-right: 20px;
+        margin-left: 60px;
+        max-width: 36%;
+    }
+  
+    .anpin2{
+        display: flex;
+    }
+    .anpin2 img{
+        width: 290px;
+        height: 167px;
+    }
+
+    .sekkanroumain img{
+        width: 600px;
+        height: 336px;
+    }
+    .sekkanroumain{
+        display: flex;
+    }
+    .sekkanrou1 img{
+        width: 600px;
+        height: 336px;
+    }
+    .sekkanrou1 text{
+        width: 500px;
+    }
+    .sekkanrou2 img{
+        width: 290px;
+        height: 167px;
+    }
+    .sekkanrou1{
+        display: flex;
+    }
+    .sekkanrou2{
+        display: flex;
+    }
+    /* なぜかここだけ変わらない */
+    .contentTitle2 p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    
+    .gourmet0 {
+        flex-wrap: wrap;
+    }
+    
+    .gourmet1 p img{
+        width: 510px;
+        height: 220px;
+    }
+    .gourmet2 p img{
+        width: 510px;
+        height: 220px;
+    }
+    .gourmet3 p img{
+        width: 510px;
+        height: 220px;
+    }
+    .gourmet4 p img{
+        width: 510px;
+        height: 220px;
+    }
+    .Pickup1 img{
+        width: 600px;
+        height: 340px;
+    }
+    .Pickup2 img{
+        width: 510px;
+        height: 214px;
+    }
+    .hasuPc1{
+        width: 600px;
+        height: 325px;
+        margin-left: 0;
+    }
+    .hasuPc2{
+        width: 420px;
+        height: 209px;
+    }
+    .squareText2{
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .line {
+        content:'';
+        width: 223px; /* 線の幅 */
+        height: 1px; /* 線の高さ */
+        background-color: #000000; /* 線の色 */
+        /* position: absolute; position: relative;からの線の絶対位置 */
+        /* left: 76px; */
+        text-align: center;   
+    }
+    .line1 {
+        content:'';
+        width: 100%; /* 線の幅 */
+        height: 1px; /* 線の高さ */
+        background-color: #000000; /* 線の色 */
+        position: absolute;
+        top: 699px;
+    }
+    .gourmetText{
+        display: block;
+        width: 35%;
+    }
+    .gourmet p{
+        font-size: 20px;
+        font-family: Zen Kaku Gothic New;
+        line-height: 32px;
+        /* padding: 8px 32px; */
+        /* padding-top: 8px; */
+        /* padding-bottom: 8px; */
+        /* margin-left: 76px; */
+        /* margin-right: 76px; */
+    }
+
+    .contentTitle13 h1{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .goulmt1{
+        width: 36%;
+    }
+    .onSen{
+        display: flex;
+    }
+    .hasuPc2{
+        width: 420px;
+        height: 209px;
+    }
+
+
+    /* ヘッダー */
+    /* .frameBorder2 {
+        display: none;
+    }
+    #pageTop img{
+        width: 100px;
+        height: 100px;
+        right: 20px;
+    }
+
+    footer{
+        padding: 40px 0 0;
+        position: relative;
+    }
+    .country {
+        width: 64px;
+        height: 48px;
+    }
+    .footerNavi{
+        width: 332px;
+        padding: 0;
+        margin: 28px 0 20px 103px;
+        font-size: 20px;
+    }
+    .footerNavi li{
+        margin-bottom: 32px;
+    }
+    .logo2{
+        width: 256px;
+        height: 103px;
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 376px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .facebook2{
+        margin: 0;
+        position: absolute;
+        left: 70%;
+        top: 376px;
+    }
+    .instagram2{
+        margin: 0;
+        position: absolute;
+        left: 75%;
+        top: 376px;
+    }
+    .twitter2{
+        margin: 0;
+        position: absolute;
+        left: 80%;
+        top: 376px;
+    }
+    footer p{
+        font-size: 12px;
+        padding: 20px;
+    } */
+    footer{
+        padding: 40px 0 0;
+        position: relative;
+    }
+    .country {
+        width: 64px;
+        height: 48px;
+    }
+    .footerNavi{
+        width: 332px;
+        padding: 0;
+        margin: 28px 0 20px 103px;
+        font-size: 20px;
+    }
+    .footerNavi li{
+        margin-bottom: 32px;
+    }
+    .logo2{
+        width: 256px;
+        height: 103px;
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 376px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .facebook2{
+        margin: 0;
+        position: absolute;
+        left: 70%;
+        top: 376px;
+    }
+    .instagram2{
+        margin: 0;
+        position: absolute;
+        left: 75%;
+        top: 376px;
+    }
+    .twitter2{
+        margin: 0;
+        position: absolute;
+        left: 80%;
+        top: 376px;
+    }
+    footer p{
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    /* 赤枠 */
+.frameBorder1 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 89%;
+    height: 5500px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+.frameBorder2 {
+    border: 1px solid #FF0000;
+    margin: 0px auto;
+    width: 89%;
+    height: 450px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    pointer-events: none;
+}
+}
